@@ -307,3 +307,49 @@ body {
   left: 192px;
   top: 15px;
 }
+
+.iphone-container {
+  width: 640px;
+  height: 1136px;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: scroll;
+  position: relative ;
+  top: 107px;
+  z-index: 100;
+}
+
+.container-custom {
+  width: 615px;
+}
+
+.iphone-picture {
+  position: relative;
+  top: -1269px;
+  background-image:url('iphone.png');
+  height: 1606px;
+  width: 852px;
+  background-size: 100% 100%;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 0;
+}
+
+body {
+  height: 1700px;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+ 
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+ 
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
+}
