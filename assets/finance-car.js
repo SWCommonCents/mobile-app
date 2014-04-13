@@ -14,8 +14,15 @@ $(document).ready(function() {
 		show('car-picker-container');
 	})
 
+	// Handle global profile handler
 	$('#profile-icon').on('click', function() {
-		// to-do: bring up the profile icon 
+		hideMap();
+		show('profile-container');
+	})
+
+	$('#go-back').on('click', function() {
+		hide('profile-container');
+		showMap();
 	})
 
 	// set up drag to scroll for the map
@@ -42,6 +49,29 @@ $(document).ready(function() {
 	  paginationSpeed : 400,
 	  singleItem:true
 	});
+
+	$('#review-dialogue').dialog({
+		autoOpen: false,
+		resizable: true,
+		height: 500,
+		width: 500,
+		modal:true,
+		buttons: {
+			"Confirm purchase" : function() {
+				$( this ).dialog("close");
+				hide('car-picker-container')
+				showMap();
+			},
+			Cancel: function() {
+				$( this ).dialog("close");
+			}
+		}
+	});
+
+	$('#car-picker-review').on('click', function() {
+		// open modal for confirmation dialogue
+		$("#review-dialogue").dialog("open");
+	});
 });
 
 var hide = function(id) {
@@ -61,6 +91,13 @@ var hideMap = function(){
 	hide('city-container');
 	hide('UI-bar');
 	hide('car-dealership-tag');
+}
+
+
+var showMap = function() {
+	show('city-container');
+	show('UI-bar');
+	show('car-dealership-tag');
 }
 
 function player(){
@@ -119,4 +156,11 @@ var pickCar = function(name) {
 	updateState('car', name);
 	hide('car-picker-container');
 	show('loan-picker-container');
+}
+
+var pickLoan = function(id) {
+	var text = id == 1 ? "Car Dealership Loan" : "Ameritrabe Bank";
+	$('#car-picker-next').text("Loan: " + text);
+	hide('loan-picker-container');
+	show('car-picker-container');
 }

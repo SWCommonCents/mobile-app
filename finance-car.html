@@ -14,8 +14,6 @@
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
     <!-- OWL Carousel -->
     <link rel="stylesheet" href="assets/owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="assets/owl-carousel/owl.theme.css">
@@ -25,14 +23,14 @@
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
     <style type="text/css"></style>
 
-    <!-- Custom css/js -->
-    <link rel="stylesheet" type="text/css" href="assets/finance-car.css">
-    <script src="assets/finance-car.js"></script>
-
     <!-- Drag to scroll -->
     <script type="text/javascript" src="assets/dragscrollable.js"></script>
     <script type="text/javascript" src="assets/scrollsync.js"></script>
     
+    <!-- Custom css/js -->
+    <link rel="stylesheet" type="text/css" href="assets/finance-car.css">
+    <script src="assets/finance-car.js"></script>
+
     <title>Finance Car</title>
   </head> <!-- end head -->
   
@@ -43,7 +41,7 @@
  
   <div class="iphone-container" id="iphone-container"> 
     <!-- city container -->
-    <div class="container container-custom hidden" id="city-container">
+    <div class="container container-custom show" id="city-container">
       <div class="city-img" id="city-img"></div>
       <div class="car-dealership" id='car-dealership-tag'></div>
     </div>
@@ -145,10 +143,28 @@
 
       <div class="finance-car-review">
         <div>
-          <button class="btn btn-primary btn-custom" id="car-picker-next" onclick="pickCar()">Review Choice</button>    
+          <button class="btn btn-primary btn-custom" id="car-picker-review" on>Review Choice</button>    
         </div>
       </div>
 
+      <!-- Modal dialogue for review -->
+      <div id="review-dialogue">
+        <h2>Loan: Ameritrabe Bank</h2>
+        <table class="table table-striped table-hover table-loan">
+          <tr>
+            <td>APR</td>
+            <td>5.4%</td>
+          </tr>
+          <tr>
+            <td>Term</td>
+            <td>48 months</td>
+          </tr>
+          <tr>
+            <td>Credit Required</td>
+            <td>Good</td>
+          </tr>
+        </table>
+      </div>
     </div> <!-- end car picker -->
 
     <!-- loan picker -->
