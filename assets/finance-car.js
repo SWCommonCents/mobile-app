@@ -53,6 +53,7 @@ $(document).ready(function() {
 	  singleItem:true
 	});
 
+	// set modal for review
 	$('#review-dialogue').dialog({
 		autoOpen: false,
 		resizable: true,
@@ -77,6 +78,29 @@ $(document).ready(function() {
 		$("#review-dialogue").dialog("open");
 	});
 	
+	//set modal for bad loan warning
+	$('#warning-dialogue').dialog({
+		autoOpen: false,
+		height: 600,
+		width: 600,
+		modal: true,
+		buttons: {
+			"Yes": function() {
+				$( this ).dialog("close");
+				hide('loan`-picker-container');
+				show('car-picker-container');
+				setTitleText('Car Picker');
+			},
+			"No, let me reconsider": function() {
+				$(this).dialog("close");
+			}
+		}
+	});
+
+	$('#loan-picker-bad').on('click', function() {
+		$('#warning-dialogue').dialog("open");
+	});
+
 	$('#goto-current-challenges').on('click', function() {
 		hide('profile-container');
 		show('challenge-container');
@@ -88,6 +112,22 @@ $(document).ready(function() {
 		show('profile-container');
 		setTitleText("Profile");
 	});
+
+	$('#info-box-button').on('click', function() {
+		hide('loan-picker-container');
+		show('info-screen-container');
+	});
+
+	$('#info-screen-container').on('click', function() {
+		hide('info-screen-container');
+		show('loan-picker-container');
+	});
+
+	$('.info-img').on('click', function() {
+		hide('info-screen-container');
+		show('loan-picker-container');
+	});
+
 });
 
 var hide = function(id) {
@@ -185,3 +225,4 @@ var pickLoan = function(id) {
 var setTitleText = function(text) {
 	$('.UI-bar-title').text(text);
 }
+

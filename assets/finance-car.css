@@ -425,6 +425,14 @@ body {
   cursor: pointer;
 }
 
+.help-icon {
+  width: 27px;
+  height: 27px;
+  margin-left: 10px;
+  margin-bottom: 2px;
+  cursor: pointer;
+}
+
 .finance-car-review {
   padding-top: 10px;
 }
@@ -440,4 +448,29 @@ body {
 
 .description-text {
   padding-top: 25px;
+}
+
+#profile-container {
+  overflow: scroll;
+}
+
+#loan-picker-bad {
+  font-size: 15px;
+}
+
+#info-box-button {
+  position: relative;
+  cursor: pointer;
+  height: 50px;
+  width: 50px;
+  bottom: 1100px;
+  left: 565px;
+}
+
+#info-screen-container {
+}
+
+.info-img {
+  position: relative;
+  left: -12px;
 }
