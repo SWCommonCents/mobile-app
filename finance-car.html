@@ -45,6 +45,7 @@
       <div class="city-img" id="city-img"></div>
       <div class="car-dealership" id='car-dealership-tag'></div>
     </div>
+
     <!-- car picker -->
     <div class="container container-custom hidden" id="car-picker-container">
       <h1>Picking your car</h1>
@@ -69,7 +70,6 @@
               <td>Very Low</td>
             </tr>
           </tbody></table>
-          <button class="btn btn-primary btn-custom" id="car-picker-next" onclick="pickCar('fonda')">Choose car</button>
         </div>
         <div class="item">
           <h2>Boyota Camry (2003)</h1>
@@ -88,7 +88,6 @@
               <td>Good</td>
             </tr>
           </tbody></table>
-          <button class="btn btn-primary btn-custom" id="car-picker-next" onclick="pickCar('deep')">Choose car</button>
         </div>
         <div class="item">
           <h2>Mord Fustang Convertible (2014)</h1>
@@ -107,9 +106,21 @@
               <td>Excellent</td>
             </tr>
           </tbody></table>
-          <button class="btn btn-primary btn-custom" id="car-picker-next" onclick="pickCar('testa')">Choose car</button>
         </div>
       </div>
+
+      <div class="finance-car-box">
+        <div>
+          <button class="btn btn-primary btn-custom" id="car-picker-next" onclick="pickCar()">Choose Loan</button>
+        </div>
+      </div>
+
+      <div class="finance-car-review">
+        <div>
+          <button class="btn btn-primary btn-custom" id="car-picker-next" onclick="pickCar()">Review Choice</button>    
+        </div>
+      </div>
+
     </div> <!-- end car picker -->
 
     <!-- loan picker -->
