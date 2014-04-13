@@ -474,3 +474,7 @@ body {
   position: relative;
   left: -12px;
 }
+
+#profile-container {
+  height: 2000px;
+}
