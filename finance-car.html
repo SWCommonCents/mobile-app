@@ -26,13 +26,25 @@
     <!-- Custom css/js -->
     <link rel="stylesheet" type="text/css" href="assets/finance-car.css">
     <script src="assets/finance-car.js"></script>
+
+    <!-- Drag to scroll -->
+    <script type="text/javascript" src="assets/dragscrollable.js"></script>
+    <script type="text/javascript" src="assets/scrollsync.js"></script>
+    
     <title>Finance Car</title>
   </head> <!-- end head -->
   
   <body>
-  <div class="iphone-container">
+  <div class="iphone-container" id="iphone-container">
+
+    <!-- city container -->
+    <div class="container container-custom show" id="city-container">
+      <div class="city-img" id="city-img"></div>
+      <div class="UI-bar"></div>
+    </div>
+
     <!-- car picker -->
-    <div class="container container-custom shown" id="car-picker-container">
+    <div class="container container-custom hidden" id="car-picker-container">
       <h1>Picking your car</h1>
       <p>
         The dealer walks you to the showroom. They have three cars available.

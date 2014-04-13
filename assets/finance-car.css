@@ -353,3 +353,17 @@ body {
     border-radius: 10px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5); 
 }
+
+.city-img {
+  height: 1115px;
+  width: 6000px;
+  background-image:url('city.jpg');
+  margin-left: -21px;
+}
+
+.UI-bar {
+  position: absolute;
+  height: 100px;
+  width: 500px;
+  background-color: red;
+}

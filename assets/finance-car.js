@@ -9,6 +9,12 @@ $(document).ready(function() {
 	newPlayer.setBankAccount(100);
 	state["player"] = newPlayer;
 
+	// set up drag to scroll for the map
+	$("#iphone-container").dragscrollable({
+		dragSelector: '#city-img',
+		acceptPropagatedEvent: false
+	});	
+
 	$('#intro-next').on('click', function() {
 		hide('intro-container');
 		show('profile-container');
@@ -22,7 +28,6 @@ $(document).ready(function() {
 	});
 
 	$("#owl-demo").owlCarousel({
-
 	  navigation : true, // Show next and prev buttons
 	  slideSpeed : 300,
 	  paginationSpeed : 400,
