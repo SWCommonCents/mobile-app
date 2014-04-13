@@ -30,7 +30,6 @@ var show = function(id) {
 	currClass.addClass('shown');
 }
 
-<<<<<<< HEAD
 $(document).ready(function() {
  
   $("#owl-demo").owlCarousel({
@@ -50,7 +49,7 @@ $(document).ready(function() {
   });
  
 });
-=======
+
 function player(){
 	var bankAccount = 0;
 	var existingLoans = 0;
@@ -98,4 +97,3 @@ var newPlayer = new player();
 newPlayer.setCreditScore(150);
 newPlayer.setExistingLoans(125);
 newPlayer.setBankAccount(100);
->>>>>>> 05e310e9b7840aece41484e5fcd31186a8d15c22
