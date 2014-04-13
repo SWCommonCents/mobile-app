@@ -9,6 +9,15 @@ $(document).ready(function() {
 	newPlayer.setBankAccount(100);
 	state["player"] = newPlayer;
 
+	$('.car-dealership').on('click', function() {
+		hideMap();
+		show('car-picker-container');
+	})
+
+	$('#profile-icon').on('click', function() {
+		// to-do: bring up the profile icon 
+	})
+
 	// set up drag to scroll for the map
 	$("#iphone-container").dragscrollable({
 		dragSelector: '#city-img',
@@ -37,7 +46,6 @@ $(document).ready(function() {
 
 var hide = function(id) {
 	var currClass = $('#' + id);
-	console.log(currClass);
 	currClass.removeClass('shown');
 	currClass.addClass('hidden');
 }
@@ -46,6 +54,13 @@ var show = function(id) {
 	var currClass = $('#' + id);
 	currClass.removeClass('hidden');
 	currClass.addClass('shown');
+}
+
+// function to hide map-only elements
+var hideMap = function(){
+	hide('city-container');
+	hide('UI-bar');
+	hide('car-dealership-tag');
 }
 
 function player(){

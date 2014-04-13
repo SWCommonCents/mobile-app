@@ -282,7 +282,7 @@ body {
 }
 
 .loan-box {
-  width: 500px;
+  width: 620px;
   height: 270px;
   border-radius: 5px;
   background-color: #F0F0F0;
@@ -304,31 +304,31 @@ body {
 
 .loan-btn {
   position: relative;
-  left: 192px;
+  left: 257px;
   top: 15px;
 }
 
 .iphone-container {
-  width: 640px;
-  height: 1136px;
+  overflow: hidden;
+  width: 652px;
+  height: 1138px;
   margin-top: 100px;
   margin-left: auto;
   margin-right: auto;
-  overflow: scroll;
   position: relative ;
   top: 107px;
   z-index: 100;
 }
 
 .container-custom {
-  width: 615px;
+  width: 640px;
 }
 
 .iphone-picture {
   position: relative;
-  top: -1269px;
+  top: -1267px;
   background-image:url('iphone.png');
-  height: 1606px;
+  height: 1572px;
   width: 852px;
   background-size: 100% 100%;
   margin-left: auto;
@@ -362,8 +362,36 @@ body {
 }
 
 .UI-bar {
-  position: absolute;
-  height: 100px;
-  width: 500px;
-  background-color: red;
+  position: relative;
+  top: 346px;
+  left: 5px;
+  height: 80px;
+  width: 640px;
+  z-index: 101;
+  margin-left: auto;
+  margin-right: auto;
+  background-image:url('nav-UI.png');
 }
+.profile-icon {
+  position: relative;
+  top: 278px;
+  height: 55px;
+  width: 54px;
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 200;
+  cursor: pointer;
+  left: 203px;
+}
+
+.car-dealership {
+  position: absolute;
+  z-index: 999;
+  height: 137px;
+  width: 287px;
+  top: 910px;
+  left: 431px;
+  background-image: url('car-dealership-tag.png');
+  cursor: pointer;
+}
+
