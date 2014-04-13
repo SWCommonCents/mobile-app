@@ -354,9 +354,8 @@ body {
 
 #profile-container{
   text-align: center;
-}
-#challenge-container{
-  text-align: center;
+  position:relative;
+  top:-200px;
 }
 
 ::-webkit-scrollbar {
@@ -450,9 +449,6 @@ body {
   padding-top: 25px;
 }
 
-#profile-container {
-  overflow: scroll;
-}
 
 #loan-picker-bad {
   font-size: 15px;
@@ -475,6 +471,31 @@ body {
   left: -12px;
 }
 
-#profile-container {
-  height: 2000px;
+#goto-current-challenges {
+  position: relative;
+  left: 0px;
+}
+
+#challenge-back-button {
+  position: relative;
+  top: 145px;
+  left: -15px;
+  width: 250px;
+  height: 100px;
+  cursor: pointer;
+}
+
+#challenge-container {
+  position: relative;
+  top: -171px;
+  text-align: center;
+}
+
+#go-back {
+  position:relative;
+  top: 231px;
+  left: -15px;
+  cursor: pointer;
+  width: 250px;
+  height: 100px;
 }
