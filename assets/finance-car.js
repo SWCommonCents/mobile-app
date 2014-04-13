@@ -2,6 +2,8 @@ $(document).ready(function() {
 	$('#intro-next').on('click', function() {
 		hide('intro-container');
 		show('profile-container');
+		$('.bank').html(newPlayer.getBankAccount());
+		$('.loans').html(newPlayer.getExistingLoans());
 	});
 
 	$('#profile-next').on('click', function() {
@@ -28,6 +30,7 @@ var show = function(id) {
 	currClass.addClass('shown');
 }
 
+<<<<<<< HEAD
 $(document).ready(function() {
  
   $("#owl-demo").owlCarousel({
@@ -47,3 +50,52 @@ $(document).ready(function() {
   });
  
 });
+=======
+function player(){
+	var bankAccount = 0;
+	var existingLoans = 0;
+	var creditScore = 0;
+
+	this.getCreditScore = function(){
+		return creditScore;
+	}
+	this.setCreditScore = function( score ){
+		creditScore = score;
+	};
+
+	this.getExistingLoans = function(){
+		return existingLoans;
+	};
+	this.setExistingLoans = function( loans ){
+		existingLoans = loans;
+	}
+
+	this.getBankAccount = function(){
+		return bankAccount;
+	}
+	this.setBankAccount = function( account ){
+		bankAccount = account;
+	}
+}
+
+function car( make, value, loan ){
+	var name = make;
+	var cost = value;
+	var interest = loan;
+
+	this.getName = function(){
+		return name;
+	}
+	this.getCost = function(){
+		return cost;
+	}
+	this.getInterest = function(){
+		return interest;
+	}
+}
+
+var newPlayer = new player();
+newPlayer.setCreditScore(150);
+newPlayer.setExistingLoans(125);
+newPlayer.setBankAccount(100);
+>>>>>>> 05e310e9b7840aece41484e5fcd31186a8d15c22
