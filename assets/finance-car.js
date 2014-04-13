@@ -15,6 +15,11 @@ $(document).ready(function() {
 		setTitleText("Car Dealership");
 	})
 
+	$('#login').on('click', function() {
+		hide('login-container');
+		showMap();
+	})
+
 	// Handle global profile handler
 	$('#profile-icon').on('click', function() {
 		hideMap();
