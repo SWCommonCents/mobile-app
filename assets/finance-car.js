@@ -2,6 +2,8 @@ $(document).ready(function() {
 	$('#intro-next').on('click', function() {
 		hide('intro-container');
 		show('profile-container');
+		$('.bank').html(newPlayer.getBankAccount());
+		$('.loans').html(newPlayer.getExistingLoans());
 	});
 
 	$('#profile-next').on('click', function() {
@@ -27,3 +29,39 @@ var show = function(id) {
 	currClass.removeClass('hidden');
 	currClass.addClass('shown');
 }
+
+function player(){
+	var bankAccount = 0;
+	var existingLoans = 0;
+	var creditScore = 0;
+
+	this.getCreditScore = function(){
+		return creditScore;
+	}
+	this.setCreditScore = function( score ){
+		creditScore = score;
+	};
+
+	this.getExistingLoans = function(){
+		return existingLoans;
+	};
+	this.setExistingLoans = function( loans ){
+		existingLoans = loans;
+	}
+
+	this.getBankAccount = function(){
+		return bankAccount;
+	}
+	this.setBankAccount = function( account ){
+		bankAccount = account;
+	}
+}
+
+function car(){
+
+}
+
+var newPlayer = new player();
+newPlayer.setCreditScore(150);
+newPlayer.setExistingLoans(125);
+newPlayer.setBankAccount(100);
