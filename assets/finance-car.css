@@ -14,6 +14,9 @@ body {
   padding-bottom: 20px;
 }
 
+
+/* font-weight: 300; font-family: "proxima-nova"; */
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,
@@ -112,6 +115,9 @@ body {
 /* Padding below the footer and lighter body text */
 
 body {
+  font-family: "proxima-nova";
+  font-weight: 300;
+  font-size: 34px;
   padding-bottom: 40px;
   color: #5a5a5a;
 }
@@ -292,6 +298,7 @@ body {
   background-color: #F0F0F0;
   margin-top: 20px;
   margin-bottom: 20px;
+  font-size: 25px;
 }
 
 .table-loan {
@@ -327,6 +334,7 @@ body {
 .container-custom {
   width: 640px;
 }
+
 
 .iphone-picture {
   position: relative;
@@ -374,15 +382,26 @@ body {
 
 .UI-bar {
   position: relative;
-  top: 346px;
-  left: 5px;
+  top: 414px;
   height: 80px;
-  width: 640px;
+  width: 647px;
+  left: 3px;
   z-index: 101;
   margin-left: auto;
   margin-right: auto;
   background-image:url('nav-UI.png');
+  background-repeat: no-repeat;
 }
+
+.UI-bar-title {
+  position: relative;
+  top: 346px;
+  font-size: 50px;
+  z-index: 101;
+  text-align: center;
+  color: white;
+}
+
 .profile-icon {
   position: relative;
   top: 278px;
@@ -412,4 +431,13 @@ body {
 
 #car-picker-next {
   margin-top: 20px;
+}
+
+#loan-picker-container {
+  overflow: scroll;
+  height: 1100px;
+}
+
+.description-text {
+  padding-top: 25px;
 }

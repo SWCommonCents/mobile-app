@@ -12,17 +12,20 @@ $(document).ready(function() {
 	$('.car-dealership').on('click', function() {
 		hideMap();
 		show('car-picker-container');
+		setTitleText("Car Dealership");
 	})
 
 	// Handle global profile handler
 	$('#profile-icon').on('click', function() {
 		hideMap();
 		show('profile-container');
+		setTitleText("Profile");
 	})
 
 	$('#go-back').on('click', function() {
 		hide('profile-container');
 		showMap();
+		setTitleText("The City");
 	})
 
 	// set up drag to scroll for the map
@@ -41,10 +44,10 @@ $(document).ready(function() {
 	$('#profile-next').on('click', function() {
 		hide('profile-container');
 		show('car-picker-container');
+		setTitleText("Car Dealership");
 	});
 
 	$("#owl-demo").owlCarousel({
-	  navigation : true, // Show next and prev buttons
 	  slideSpeed : 300,
 	  paginationSpeed : 400,
 	  singleItem:true
@@ -61,6 +64,7 @@ $(document).ready(function() {
 				$( this ).dialog("close");
 				hide('car-picker-container')
 				showMap();
+				setTitleText("The City");
 			},
 			Cancel: function() {
 				$( this ).dialog("close");
@@ -71,6 +75,18 @@ $(document).ready(function() {
 	$('#car-picker-review').on('click', function() {
 		// open modal for confirmation dialogue
 		$("#review-dialogue").dialog("open");
+	});
+	
+	$('#goto-current-challenges').on('click', function() {
+		hide('profile-container');
+		show('challenge-container');
+		setTitleText("Challenges");
+	});
+
+	$('#challenge-back-button').on('click', function() {
+		hide('challenge-container');
+		show('profile-container');
+		setTitleText("Profile");
 	});
 });
 
@@ -89,7 +105,6 @@ var show = function(id) {
 // function to hide map-only elements
 var hideMap = function(){
 	hide('city-container');
-	hide('UI-bar');
 	hide('car-dealership-tag');
 }
 
@@ -156,6 +171,7 @@ var pickCar = function(name) {
 	updateState('car', name);
 	hide('car-picker-container');
 	show('loan-picker-container');
+	setTitleText("Loans");
 }
 
 var pickLoan = function(id) {
@@ -163,4 +179,9 @@ var pickLoan = function(id) {
 	$('#car-picker-next').text("Loan: " + text);
 	hide('loan-picker-container');
 	show('car-picker-container');
+	setTitleText("Car Dealership");
+}
+
+var setTitleText = function(text) {
+	$('.UI-bar-title').text(text);
 }

@@ -27,9 +27,13 @@
     <script type="text/javascript" src="assets/dragscrollable.js"></script>
     <script type="text/javascript" src="assets/scrollsync.js"></script>
     
+    <script type="text/javascript" src="//use.typekit.net/zql5evn.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+
     <!-- Custom css/js -->
     <link rel="stylesheet" type="text/css" href="assets/finance-car.css">
     <script src="assets/finance-car.js"></script>
+
 
     <title>Finance Car</title>
   </head> <!-- end head -->
@@ -37,6 +41,7 @@
   <body>
   <!-- UI bar for city container -->
   <div class="UI-bar" id="UI-bar"></div>
+  <div class="UI-bar-title">The City</div>
   <div class="profile-icon" id="profile-icon"></div>
  
   <div class="iphone-container" id="iphone-container"> 
@@ -71,9 +76,9 @@
       <button class="btn btn-primary btn-custom" id="goto-current-challenges">Finance A Car</button>
     </div>
     
-        <!-- Challenge container -->
-    <div class="container container-custom show" id="challenge-container">
-      <br><div style="text-align: left"><button style="width: 250px;" class="btn btn-primary btn-custom" id="go-back">Back</button></div>
+    <!-- Challenge container -->
+    <div class="container container-custom hidden" id="challenge-container">
+      <br><div style="text-align: left"><button style="width: 250px;" class="btn btn-primary btn-custom" id="challenge-back-button">Back</button></div>
       <h1 style="padding: 45px;">Challenge</h1>
       <img src="assets/shevy.png" style="height: 199px; width: 395;"/><br>
       <h2>Finance a Car.</h2>
@@ -81,11 +86,10 @@
       <button class="btn btn-primary btn-custom" id="begin-car-challenge">Begin Challenge</button>
     </div>
 
-
     <!-- car picker -->
     <div class="container container-custom hidden" id="car-picker-container">
       <h1>Picking your car</h1>
-      <p>
+      <p class="description-text">
         The dealer walks you to the showroom. They have three cars available.
       </p>
       <div id="owl-demo" class="owl-carousel owl-theme">
@@ -99,7 +103,7 @@
             </tr>
             <tr class="danger">
               <td><b>Speed</b></td>
-              <td>$15</td>
+              <td>+30</td>
             </tr>
             <tr class="danger">
               <td><b>Reliability</b></td>
@@ -117,7 +121,7 @@
             </tr>
             <tr>
               <td><b>Speed</b></td>
-              <td>30</td>
+              <td>+50</td>
             </tr>
             <tr>
               <td><b>Reliability</b></td>
@@ -135,7 +139,7 @@
             </tr>
             <tr class="success">
               <td><b>Speed</b></td>
-              <td>100</td>
+              <td>+70</td>
             </tr>
             <tr class="success">
               <td><b>Reliability</b></td>
@@ -180,7 +184,7 @@
     <!-- loan picker -->
     <div class="container container-custom hidden" id="loan-picker-container">
       <h1>Picking a loan</h1>
-      <p> 
+      <p class="description-text"> 
         The salesman leads you to his Office. "How would you like to pay for your car?" These are the following loan choices.
      </p>
 
@@ -193,7 +197,7 @@
           </tr>
           <tr>
             <td>Term</td>
-            <td>48 months</td>
+            <td>48 mo</td>
           </tr>
           <tr>
             <td>Credit Required</td>
@@ -212,7 +216,7 @@
           </tr>
           <tr>
             <td>Term</td>
-            <td>36 months</td>
+            <td>36 mo</td>
           </tr>
           <tr>
             <td>Credit Required</td>
@@ -231,7 +235,7 @@
           </tr>
           <tr>
             <td>Term</td>
-            <td>96 months</td>
+            <td>96 mo</td>
           </tr>
           <tr class="danger">
             <td>Credit Required</td>
