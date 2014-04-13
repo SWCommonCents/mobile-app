@@ -343,6 +343,9 @@ body {
 #profile-container{
   text-align: center;
 }
+#challenge-container{
+  text-align: center;
+}
 
 ::-webkit-scrollbar {
     width: 12px;
