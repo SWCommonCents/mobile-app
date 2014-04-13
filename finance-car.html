@@ -14,6 +14,8 @@
     <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
     <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+
     <!-- OWL Carousel -->
     <link rel="stylesheet" href="assets/owl-carousel/owl.carousel.css">
     <link rel="stylesheet" href="assets/owl-carousel/owl.theme.css">
@@ -41,10 +43,36 @@
  
   <div class="iphone-container" id="iphone-container"> 
     <!-- city container -->
-    <div class="container container-custom show" id="city-container">
+    <div class="container container-custom hidden" id="city-container">
       <div class="city-img" id="city-img"></div>
       <div class="car-dealership" id='car-dealership-tag'></div>
     </div>
+
+    <!-- profile container  savings income creditscore challenges -->
+    <div class="container container-custom hidden" id="profile-container">
+      <br><div style="text-align: left"><button style="width: 250px;" class="btn btn-primary btn-custom" id="go-back">Back</button></div>
+      <h1 style="padding: 45px;">Profile</h1>
+      <h2 style="padding: 25px;">Name: July Veronica</h2>
+      <img src="assets/profile-picture.jpg"><br>
+      <table class="table table-hover table-striped"><tbody>
+        <tr>
+          <td >Savings</td>
+          <td>$7,639</td>
+        </tr>
+        <tr>
+          <td>Monthly Income</td>
+          <td>$2,147</td>
+        </tr>
+        <tr>
+          <td>Credit Score</td>
+          <td>723</td>
+        </tr>
+      </tbody></table>
+      <button class="btn btn-primary btn-custom" id="goto-challenges">Challenges</button>
+      <br><h3>Current Challenge</h3>
+      <button class="btn btn-primary btn-custom" id="goto-current-challenges">Finance A Car</button>
+    </div>
+
 
     <!-- car picker -->
     <div class="container container-custom hidden" id="car-picker-container">
