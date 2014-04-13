@@ -151,12 +151,14 @@ var show = function(id) {
 var hideMap = function(){
 	hide('city-container');
 	hide('car-dealership-tag');
+	hide('UI-bottom');
 }
 
 
 var showMap = function() {
 	show('city-container');
 	show('UI-bar');
+	show('UI-bottom');
 	show('car-dealership-tag');
 }
 

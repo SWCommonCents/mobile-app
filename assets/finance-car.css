@@ -392,6 +392,30 @@ body {
   background-repeat: no-repeat;
 }
 
+.UI-bottom{
+  position: relative;
+  top: 1322px;
+  height: 80px;
+  width: 651px;
+  left: 0px;
+  z-index: 101;
+  margin-left: auto;
+  margin-right: auto;
+  background-image:url('bottom-nav.png');
+  background-color: #70cbfc;
+  background-repeat: no-repeat;
+}
+
+#login-container{
+  background-color: #70cbfc;
+}
+
+ #login{
+  position: relative;
+  bottom: 100px;   
+  right: 10px;
+ }
+
 .UI-bar-title {
   position: relative;
   top: 346px;
