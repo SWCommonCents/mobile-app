@@ -31,7 +31,7 @@
   
   <body>
    <div class="container shown" id="intro-container">
-   <h1>Let's buy a car!</h1>
+   <h1>Buying a car</h1>
    <button type="button" class="btn btn-primary btn-custom" id="intro-next">Next</button>
    </div>
 
@@ -64,8 +64,8 @@
       </p>
       <div id="owl-demo" class="owl-carousel owl-theme">
         <div class="item">
-          <h2>Fonda Civic (1995)</h1>
-          <div class="car-image" id="civic"></div>
+          <h2>Shevy Pickup (1975)</h1>
+          <div class="car-image" id="shevy"></div>
           <table class="table table-hover table-striped"><tbody>
             <tr class="success">
               <td><b>Cost</b></td>
@@ -80,10 +80,11 @@
               <td>Very Low</td>
             </tr>
           </tbody></table>
+          <button class="btn btn-primary btn-custom" id="car-picker-next" onclick="pickCar('fonda')">Choose car</button>
         </div>
         <div class="item">
-          <h2>Deep Wrangler (2003)</h1>
-          <div class="car-image" id="jeep"></div>
+          <h2>Boyota Camry (2003)</h1>
+          <div class="car-image" id="boyota"></div>
           <table class="table table-hover table-striped"><tbody>
             <tr class="warning">
               <td><b>Cost</b></td>
@@ -98,14 +99,15 @@
               <td>Good</td>
             </tr>
           </tbody></table>
+          <button class="btn btn-primary btn-custom" id="car-picker-next" onclick="pickCar('deep')">Choose car</button>
         </div>
         <div class="item">
-          <h2>Testa Roadster (2014)</h1>
-          <div class="car-image" id="tesla"></div>
+          <h2>Mord Fustang Convertible (2014)</h1>
+          <div class="car-image" id="mord"></div>
           <table class="table table-hover table-striped"><tbody>
             <tr class="danger">
               <td><b>Cost</b></td>
-              <td>$85,000</td>
+              <td>$65,000</td>
             </tr>
             <tr class="success">
               <td><b>Speed</b></td>
@@ -116,7 +118,72 @@
               <td>Excellent</td>
             </tr>
           </tbody></table>
+          <button class="btn btn-primary btn-custom" id="car-picker-next" onclick="pickCar('testa')">Choose car</button>
         </div>
+      </div>
+    </div>
+    <div class="container hidden" id="loan-picker-container">
+      <h1>Picking a loan</h1>
+      <p> 
+        The salesman leads you to his Office. "How would you like to pay for your car?" These are the following loan choices.
+     </p>
+
+      <div class="loan-box">
+        <div class="loan-title">Car Dealership Loan</div>
+        <table class="table table-striped table-hover table-loan">
+          <tr>
+            <td>APR</td>
+            <td>5.4%</td>
+          </tr>
+          <tr>
+            <td>Term</td>
+            <td>48 months</td>
+          </tr>
+          <tr>
+            <td>Credit Required</td>
+            <td>Good</td>
+          </tr>
+        </table>
+         <button class="btn btn-success loan-btn" id="loan-picker-next" onclick="pickLoan(1)">Choose Loan</button>
+      </div>
+
+      <div class="loan-box">
+        <div class="loan-title">Ameritrabe Bank</div>
+        <table class="table table-striped table-hover table-loan">
+          <tr>
+            <td>APR</td>
+            <td>6.9%</td>
+          </tr>
+          <tr>
+            <td>Term</td>
+            <td>36 months</td>
+          </tr>
+          <tr>
+            <td>Credit Required</td>
+            <td>Good</td>
+          </tr>
+        </table>
+         <div class="btn btn-success loan-btn" id="loan-picker-next" onclick="pickLoan(2)">Choose Loan</div>
+      </div>
+
+      <div class="loan-box">
+        <div class="loan-title">Fells-Wargo Bank</div>
+        <table class="table table-striped table-hover table-loan">
+          <tr>
+            <td>APR</td>
+            <td>4.4%</td>
+          </tr>
+          <tr>
+            <td>Term</td>
+            <td>96 months</td>
+          </tr>
+          <tr class="danger">
+            <td>Credit Required</td>
+            <td>Excellent</td>
+          </tr>
+        </table>
+         <button class="btn btn-disabled loan-btn" id="loan-picker-next">Choose Loan</button>
+         <p class="loan-warning text-danger">You failed to qualify for this loan due to your credit scrore.</p>
       </div>
     </div>
 
@@ -135,22 +202,10 @@
       </div>
     </div>
 
-    <div class="container hidden" id="loan-picker-container">
-      <h1>Let's pick a loan!</h1>
-
+    <div class="container hidden" id="confirm-payment-container">
+      <h1>Confirm your payment</h1>
       <div class="jumbotron">
-        <h2 class="name">Loan 1</h1>
+        Let's confirm your payment
       </div>
-
-      <div class="jumbotron">
-        <h2 class="name">Loan 2</h1>
-      </div>
-
-      <div class="jumbotron">
-        <h2 class="name">Loan 3</h1>
-      </div>
-
-      <button type="button" class="btn btn-primary btn-custom" id="loan-picker-next">Next</button>
     </div>
-
 </body></html>

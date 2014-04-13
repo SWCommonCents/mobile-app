@@ -1,4 +1,14 @@
+// tracks current state 
+var state = {};
+
 $(document).ready(function() {
+	// instantiate new player and add him to the state
+	var newPlayer = new player();
+	newPlayer.setCreditScore(150);
+	newPlayer.setExistingLoans(125);
+	newPlayer.setBankAccount(100);
+	state["player"] = newPlayer;
+
 	$('#intro-next').on('click', function() {
 		hide('intro-container');
 		show('profile-container');
@@ -11,10 +21,13 @@ $(document).ready(function() {
 		show('car-picker-container');
 	});
 
-	$('#car-picker-next').on('click', function() {
-		hide('car-picker-container');
-		show('loan-picker-container');
-	})
+	$("#owl-demo").owlCarousel({
+
+	  navigation : true, // Show next and prev buttons
+	  slideSpeed : 300,
+	  paginationSpeed : 400,
+	  singleItem:true
+	});
 });
 
 var hide = function(id) {
@@ -29,26 +42,6 @@ var show = function(id) {
 	currClass.removeClass('hidden');
 	currClass.addClass('shown');
 }
-
-$(document).ready(function() {
- 
-  $("#owl-demo").owlCarousel({
- 
-      navigation : true, // Show next and prev buttons
-      slideSpeed : 300,
-      paginationSpeed : 400,
-      singleItem:true
- 
-      // "singleItem:true" is a shortcut for:
-      // items : 1, 
-      // itemsDesktop : false,
-      // itemsDesktopSmall : false,
-      // itemsTablet: false,
-      // itemsMobile : false
- 
-  });
- 
-});
 
 function player(){
 	var bankAccount = 0;
@@ -93,7 +86,17 @@ function car( make, value, loan ){
 	}
 }
 
-var newPlayer = new player();
-newPlayer.setCreditScore(150);
-newPlayer.setExistingLoans(125);
-newPlayer.setBankAccount(100);
+// Update state
+var updateState = function(key, value) {
+	state[key] = value;
+}
+
+var getState = function(key) {
+	return state[key];
+}
+
+var pickCar = function(name) {
+	updateState('car', name);
+	hide('car-picker-container');
+	show('loan-picker-container');
+}

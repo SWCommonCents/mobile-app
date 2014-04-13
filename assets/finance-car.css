@@ -259,19 +259,51 @@ body {
 
 .car-image {
   width: 520px;
-  height: 300px;
-  background-color: gray;
+  height: 250px;
   background-size: 100% 100%;
 }
 
-#civic {
-  background-image:url('civic.jpg');
+#shevy {
+  background-image:url('shevy.png');
 }
 
-#jeep {
-  background-image:url('jeep.jpg');
+#boyota {
+  background-image:url('boyota.png');
 }
 
-#tesla {
-  background-image:url('tesla.jpg');
+#mord {
+  background-image:url('mord.png');
+}
+
+.loan-warning {
+  position: relative;
+  top: 28px;
+  text-align: center;
+}
+
+.loan-box {
+  width: 500px;
+  height: 270px;
+  border-radius: 5px;
+  background-color: #F0F0F0;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.table-loan {
+  padding-top: 15px;
+  width: 400px;
+  margin: 15px auto 0 auto;
+}
+
+.loan-title {
+  text-align: center;
+  font-size: 25px;
+  padding-top: 15px;
+}
+
+.loan-btn {
+  position: relative;
+  left: 192px;
+  top: 15px;
 }
