@@ -7,18 +7,28 @@
     <meta name="description" content="">
     <meta name="author" content="">
     <link rel="shortcut icon" href="http://getbootstrap.com/assets/ico/favicon.ico">
+    
+    <!-- JQuery/JQuery UI -->
+    <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/themes/smoothness/jquery-ui.css" />
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
 
-		<link rel="stylesheet" type="text/css" href="assets/finance-car.css">
-		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-		<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
-    <title>Finance Car</title>
+    <!-- OWL Carousel -->
+    <link rel="stylesheet" href="assets/owl-carousel/owl.carousel.css">
+    <link rel="stylesheet" href="assets/owl-carousel/owl.theme.css">
+    <script src="assets/owl-carousel/owl.carousel.js"></script>
 
     <!-- Bootstrap core CSS -->
     <link href="http://getbootstrap.com/dist/css/bootstrap.min.css" rel="stylesheet">
-		<script src="assets/finance-car.js"></script>
+    <style type="text/css"></style>
 
-  <style type="text/css"></style></head>
-
+    <!-- Custom css/js -->
+    <link rel="stylesheet" type="text/css" href="assets/finance-car.css">
+    <script src="assets/finance-car.js"></script>
+    <title>Finance Car</title>
+  </head> <!-- end head -->
+  
   <body>
   	<div class="container shown" id="intro-container">
   		<h1>Let's buy a car!</h1>
@@ -48,24 +58,66 @@
     </div> <!-- /container -->
 
     <div class="container hidden" id="car-picker-container">
-      <h1>Let's pick a car!</h1>
-
-      <div class="jumbotron">
-        <h2 class="name">Ford Mustang</h1>
-        <img src="assets/car.jpg" />
+      <h1>Picking your car</h1>
+      <p>
+        The dealer walks you to the showroom. They have three cars available.
+      </p>
+      <div id="owl-demo" class="owl-carousel owl-theme">
+        <div class="item">
+          <h2>Fonda Civic (1995)</h1>
+          <div class="car-image" id="civic"></div>
+          <table class="table table-hover table-striped"><tbody>
+            <tr class="success">
+              <td><b>Cost</b></td>
+              <td>$3,000</td>
+            </tr>
+            <tr class="danger">
+              <td><b>Speed</b></td>
+              <td>$15</td>
+            </tr>
+            <tr class="danger">
+              <td><b>Reliability</b></td>
+              <td>Very Low</td>
+            </tr>
+          </tbody></table>
+        </div>
+        <div class="item">
+          <h2>Deep Wrangler (2003)</h1>
+          <div class="car-image" id="jeep"></div>
+          <table class="table table-hover table-striped"><tbody>
+            <tr class="warning">
+              <td><b>Cost</b></td>
+              <td>$15,000</td>
+            </tr>
+            <tr>
+              <td><b>Speed</b></td>
+              <td>30</td>
+            </tr>
+            <tr>
+              <td><b>Reliability</b></td>
+              <td>Good</td>
+            </tr>
+          </tbody></table>
+        </div>
+        <div class="item">
+          <h2>Testa Roadster (2014)</h1>
+          <div class="car-image" id="tesla"></div>
+          <table class="table table-hover table-striped"><tbody>
+            <tr class="danger">
+              <td><b>Cost</b></td>
+              <td>$85,000</td>
+            </tr>
+            <tr class="success">
+              <td><b>Speed</b></td>
+              <td>100</td>
+            </tr>
+            <tr class="success">
+              <td><b>Reliability</b></td>
+              <td>Excellent</td>
+            </tr>
+          </tbody></table>
+        </div>
       </div>
-
-      <div class="jumbotron">
-        <h2 class="name">Dodge Camaro</h1>
-        <img src="assets/car.jpg" />
-      </div>
-
-      <div class="jumbotron">
-        <h2 class="name">Tesla Roadster</h1>
-        <img src="assets/car.jpg" />
-      </div>
-
-      <button type="button" class="btn btn-primary btn-custom" id="car-picker-next">Next</button>
     </div>
 
     <div class="container hidden" id="down-payment-container">
