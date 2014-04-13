@@ -57,8 +57,20 @@ function player(){
 	}
 }
 
-function car(){
+function car( make, value, loan ){
+	var name = make;
+	var cost = value;
+	var interest = loan;
 
+	this.getName = function(){
+		return name;
+	}
+	this.getCost = function(){
+		return cost;
+	}
+	this.getInterest = function(){
+		return interest;
+	}
 }
 
 var newPlayer = new player();
